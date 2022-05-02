@@ -8,8 +8,14 @@
         <div class="row blog__intro">
             <div class="col-12">
                 <span>Latest News</span>
-                <h3>Recent Blog Posts</h3>
-                <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus. Most people infected with the COVID-19 virus will experience</p>
+                <h3>Tin tức mới nhất</h3>
+                <p>Cập nhật tin tức, sự kiện nóng xung quanh vấn đề covid 19 được bạn đọc quan tâm nhất trên Covid Tracker.</p>
+            </div>
+            <div class="col-12 search">
+                <div class="wrapper">
+                    <input type="text" placeholder="Tìm kiếm bài viết">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
             </div>
         </div>
         <div class="row blog__content">

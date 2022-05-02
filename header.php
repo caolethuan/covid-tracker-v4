@@ -29,51 +29,82 @@
 <!-- header section starts  -->
 
 <header>
-<!-- <a href="#" class="logo">c<span class="fas fa-virus"></span>ovid-19</a> -->
-<a href="" class="logo">
+    <!-- <a href="#" class="logo">c<span class="fas fa-virus"></span>ovid-19</a> -->
+    <a href="index.php" class="logo">
         C<i class="bx bxs-virus-block bx-tada"></i>VID TRACKER
     </a>
     <div id="menu" class="fas fa-bars"></div>
 
-        <nav class="navbar">
-            <ul>
-                <li><a href="index.php">home</a></li>
-                <li><a href="tracker.php">Tracking</a></li>
-                <li><a href="blog.php">Blogs</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="contact.php">contact</a></li>
-                <!-- <li><a href="#spread">spread</a></li> -->
-            </ul>
-        </nav>
-        <div class="user__section">
-                
-                <div class="profile" onclick="menuToggle()">
-                    <?php
-                        if (isset($_SESSION["login"])) { ?>
-                            <h4 class="user_name">Chào!
-                                    <?php echo $_SESSION["login"]["1"];
-                                    ?> 
-                                    <i class="fas fa-user-circle"></i>
-                                    </h4>    
-                        <?php } else { ?>
-                            <a class="loginBtn-header" href="login.php">Đăng nhập</a>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.php">home</a></li>
+            <li><a href="tracker.php">Tracking</a></li>
+            <li><a href="blog.php">Blogs</a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="contact.php">contact</a></li>
+            <li>
+                        <div class="user__section mobile">
+                        
+                            <div class="profile" onclick="menuToggle()">
+                                <?php
+                                    if (isset($_SESSION["login"])) { ?>
+                                        <h4 class="user_name">Chào!
+                                                <?php echo $_SESSION["login"]["1"];
+                                                ?> 
+                                                <i class="fas fa-user-circle"></i>
+                                                </h4>    
+                                    <?php } else { ?>
+                                        <a class="loginBtn-header" href="login.php">Đăng nhập</a>
+                                        
+                                    <?php }
+                                    ?>
+                            </div>
+
+
+                            <?php if (isset($_SESSION["login"])) { ?>
+
                             
-                        <?php }
-                        ?>
-                </div>
-    
-    
-                <?php if (isset($_SESSION["login"])) { ?>
-    
-                
-                <div class="dropdown-menu">
-                    <ul>
-                        <li><a href="#"><i class="fas fa-user"></i>My profile</a></li>
-                        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
-                    </ul>
-                </div>
-                <?php } ?>
-        </div>
+                            <div class="dropdown-menu mobile">
+                                <ul>
+                                    <li><a href="profile.php"><i class="fas fa-user"></i>My profile</a></li>
+                                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+                                </ul>
+                            </div>
+                            <?php } ?>
+                        </div>
+            </li>
+            <!-- <li><a href="#spread">spread</a></li> -->
+        </ul>
+    </nav>
+    <div class="user__section pc">
+            
+            <div class="profile" onclick="menuToggle()">
+                <?php
+                    if (isset($_SESSION["login"])) { ?>
+                        <h4 class="user_name">Chào!
+                                <?php echo $_SESSION["login"]["1"];
+                                ?> 
+                                <i class="fas fa-user-circle"></i>
+                                </h4>    
+                    <?php } else { ?>
+                        <a class="loginBtn-header" href="login.php">Đăng nhập</a>
+                        
+                    <?php }
+                    ?>
+            </div>
+
+
+            <?php if (isset($_SESSION["login"])) { ?>
+
+            
+            <div class="dropdown-menu pc">
+                <ul>
+                    <li><a href="profile.php"><i class="fas fa-user"></i>My profile</a></li>
+                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+                </ul>
+            </div>
+            <?php } ?>
+    </div>
 
 </header>
 </body>

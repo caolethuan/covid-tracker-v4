@@ -7,7 +7,7 @@
         <div class="contact__container">
             <div class="contact__info">
                 <div>
-                    <h2>Contact Info</h2>
+                    <h2>Contact info</h2>
                     <ul class="info">
                         <li>
                             <span><i class="fas fa-map-marked-alt"></i></span>

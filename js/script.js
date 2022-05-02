@@ -70,7 +70,7 @@ load = () => {
 }
 
 function menuToggle() {
-  const toggleMenu = document.querySelector('.dropdown-menu')
+  const toggleMenu = document.querySelector('.dropdown-menu.pc')
   toggleMenu.classList.toggle('active')
 }
 

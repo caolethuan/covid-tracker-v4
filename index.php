@@ -16,6 +16,7 @@
     <!-- custom css file link  -->
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/grid.css">
 
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,22 +33,53 @@
 <header>
 
     <!-- <a href="#" class="logo">c<span class="fas fa-virus"></span>ovid-19</a> -->
-    <a href="" class="logo">
+    <a href="index.php" class="logo">
         C<i class="bx bxs-virus-block bx-tada"></i>VID TRACKER
     </a>
     <div id="menu" class="fas fa-bars"></div>
 
     <nav class="navbar">
         <ul>
-            <li><a class="active" href="#home">home</a></li>
+            <li><a class="active" href="index.php">home</a></li>
             <li><a href="tracker.php">Tracking</a></li>
             <li><a href="blog.php">Blogs</a></li>
             <li><a href="about.php">About</a></li>
             <li><a href="contact.php">contact</a></li>
+            <li>
+                        <div class="user__section mobile">
+                        
+                            <div class="profile" onclick="menuToggle()">
+                                <?php
+                                    if (isset($_SESSION["login"])) { ?>
+                                        <h4 class="user_name">Chào!
+                                                <?php echo $_SESSION["login"]["1"];
+                                                ?> 
+                                                <i class="fas fa-user-circle"></i>
+                                                </h4>    
+                                    <?php } else { ?>
+                                        <a class="loginBtn-header" href="login.php">Đăng nhập</a>
+                                        
+                                    <?php }
+                                    ?>
+                            </div>
+
+
+                            <?php if (isset($_SESSION["login"])) { ?>
+
+                            
+                            <div class="dropdown-menu mobile">
+                                <ul>
+                                    <li><a href="profile.php"><i class="fas fa-user"></i>My profile</a></li>
+                                    <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
+                                </ul>
+                            </div>
+                            <?php } ?>
+                        </div>
+            </li>
             <!-- <li><a href="#spread">spread</a></li> -->
         </ul>
     </nav>
-    <div class="user__section">
+    <div class="user__section pc">
             
             <div class="profile" onclick="menuToggle()">
                 <?php
@@ -68,9 +100,9 @@
             <?php if (isset($_SESSION["login"])) { ?>
 
             
-            <div class="dropdown-menu">
+            <div class="dropdown-menu pc">
                 <ul>
-                    <li><a href="#"><i class="fas fa-user"></i>My profile</a></li>
+                    <li><a href="profile.php"><i class="fas fa-user"></i>My profile</a></li>
                     <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Log out</a></li>
                 </ul>
             </div>
@@ -219,44 +251,50 @@
 
     <h1 class="heading"><span>Rửa tay </span>đúng cách</h1>
 
-    <div class="box-container">
+    <div class="box-container row">
 
-        <div class="box">
-            <span>1</span>
-            <img src="images/hadnwash-1.png" alt="">
-            <h3>cho xà phòng lên tay</h3>
+        <div class="col-4 col-md-4 col-sm-12">
+            <div class="box">
+                <span>1</span>
+                <img src="images/hadnwash-1.png" alt="">
+                <h3>cho xà phòng lên tay</h3>
+            </div>   
         </div>
-
-        <div class="box">
-            <span>2</span>
-            <img src="images/hadnwash-2.png" alt="">
-            <h3>tạo bọt</h3>
+        <div class="col-4 col-md-4 col-sm-12">
+            <div class="box">
+                <span>2</span>
+                <img src="images/hadnwash-2.png" alt="">
+                <h3>tạo bọt</h3>
+            </div>
         </div>
-
-        <div class="box">
-            <span>3</span>
-            <img src="images/hadnwash-3.png" alt="">
-            <h3>rửa kẽ tay</h3>
+        <div class="col-4 col-md-4 col-sm-12">
+            <div class="box">
+                <span>3</span>
+                <img src="images/hadnwash-3.png" alt="">
+                <h3>rửa kẽ tay</h3>
+            </div>
         </div>
-
-        <div class="box">
-            <span>4</span>
-            <img src="images/hadnwash-4.png" alt="">
-            <h3>rửa mu bàn tay</h3>
+        <div class="col-4 col-md-4 col-sm-12">
+            <div class="box">
+                <span>4</span>
+                <img src="images/hadnwash-4.png" alt="">
+                <h3>rửa mu bàn tay</h3>
+            </div>
         </div>
-
-        <div class="box">
-            <span>5</span>
-            <img src="images/hadnwash-5.png" alt="">
-            <h3>rửa sạch lại với nước</h3>
+        <div class="col-4 col-md-4 col-sm-12">
+            <div class="box">
+                <span>5</span>
+                <img src="images/hadnwash-5.png" alt="">
+                <h3>rửa sạch lại với nước</h3>
+            </div>
         </div>
-
-        <div class="box">
-            <span>6</span>
-            <img src="images/hadnwash-6.png" alt="">
-            <h3>dùng khăn giấy lau khô</h3>
+        <div class="col-4 col-md-4 col-sm-12">
+            <div class="box">
+                <span>6</span>
+                <img src="images/hadnwash-6.png" alt="">
+                <h3>dùng khăn giấy lau khô</h3>
+            </div>
         </div>
-
     </div>
 
 </section>
@@ -286,7 +324,7 @@
                 C<i class="bx bxs-virus-block bx-tada"></i>VID TRACKER
             </div>
             <p>
-                Ứng dụng cập nhật những thông tin mới nhất về Covid-19. Tuyên truyền rộng rãi cho mọi người về tình hình Covid-19.
+                Trang web cập nhật những thông tin mới nhất về Covid-19. Tuyên truyền rộng rãi cho mọi người về tình hình Covid-19.
                 Giúp người dùng dễ dàng nắm bắt được danh sách các quốc gia đã xuất hiện trường hợp mắc virus corona mới, số lượng các ca mắc cũng như số trường hợp đã tử vong.
             </p>
         </div>

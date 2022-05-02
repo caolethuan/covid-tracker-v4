@@ -16,7 +16,7 @@
                 C<i class="bx bxs-virus-block bx-tada"></i>VID TRACKER
             </div>
             <p>
-                Ứng dụng cập nhật những thông tin mới nhất về Covid-19. Tuyên truyền rộng rãi cho mọi người về tình hình Covid-19.
+                Trang web cập nhật những thông tin mới nhất về Covid-19. Tuyên truyền rộng rãi cho mọi người về tình hình Covid-19.
                 Giúp người dùng dễ dàng nắm bắt được danh sách các quốc gia đã xuất hiện trường hợp mắc virus corona mới, số lượng các ca mắc cũng như số trường hợp đã tử vong.
             </p>
         </div>
